@@ -1,0 +1,55 @@
+:root{
+  --ink:#1F2937; --muted:#5B6472; --line:#D8DDE4; --side:#1F3A5F; --side-ink:#F1F5F9; --accent:#1F3A5F;
+  --font:"Segoe UI",Calibri,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#E7EAEE;color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.6;padding:1.5rem 1rem 3rem}
+ul{padding-left:1.2rem}
+ul.plain{list-style:none;padding:0}
+:focus-visible{outline:3px solid #2563EB;outline-offset:2px}
+
+/* toolbar */
+.toolbar{max-width:850px;margin:0 auto 1rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.toolbar button,.file-btn{font:inherit;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:.55rem 1.1rem;cursor:pointer}
+.toolbar button:hover,.file-btn:hover{filter:brightness(1.15)}
+#foto-msg{font-size:.9rem;color:var(--muted)}
+#foto-msg.error{color:#B91C1C;font-weight:600}
+
+/* kertas CV */
+.cv{max-width:850px;margin:0 auto;background:#fff;display:grid;grid-template-columns:260px 1fr;box-shadow:0 8px 28px rgba(0,0,0,.15);min-height:1000px}
+.side{background:var(--side);color:var(--side-ink);padding:2rem 1.5rem}
+.photo{width:180px;height:180px;margin:0 auto 1.8rem;border-radius:50%;overflow:hidden;background:#0B0D1A;border:4px solid rgba(255,255,255,.25)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+.photo img[hidden]{display:none}
+.side section{margin-bottom:1.6rem}
+.side h2{font-size:1.05rem;font-weight:700;padding-bottom:.35rem;margin-bottom:.7rem;border-bottom:1px solid rgba(255,255,255,.35)}
+.side li{padding:.15rem 0;font-size:.92rem;word-break:break-word}
+
+.main{padding:2rem 2.2rem}
+header{margin-bottom:1.6rem;padding-bottom:1rem;border-bottom:3px solid var(--accent)}
+h1{font-size:2.2rem;line-height:1.15;color:var(--accent)}
+.job{font-size:1.15rem;color:var(--muted);margin-top:.2rem}
+.main section{margin-bottom:1.6rem}
+.main h2{font-size:1.1rem;color:var(--accent);margin-bottom:.7rem;padding-bottom:.25rem;border-bottom:1px solid var(--line)}
+.item{margin-bottom:1rem}
+.row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.row h3{font-size:1rem}
+.row span{font-size:.9rem;color:var(--muted);white-space:nowrap}
+.org{color:var(--muted);font-size:.93rem;margin-bottom:.2rem}
+.item ul,.main section>ul{margin-top:.2rem}
+.main li{margin-bottom:.2rem}
+
+@media (max-width:700px){
+  .cv{grid-template-columns:1fr}
+  .main{padding:1.5rem 1.3rem}
+}
+
+/* cetak / simpan PDF */
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff;padding:0;font-size:12px}
+  .no-print{display:none!important}
+  .cv{box-shadow:none;max-width:none;min-height:297mm;grid-template-columns:70mm 1fr}
+  .side{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .photo{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}

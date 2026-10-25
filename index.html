@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Iman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="toolbar no-print">
+    <button type="button" id="print-btn">Cetak / Simpan PDF</button>
+    <label class="file-btn">Ganti foto<input type="file" id="foto-input" accept="image/png,image/jpeg,image/webp"
+        hidden></label>
+    <span id="foto-msg" role="status"></span>
+  </div>
+
+  <main class="cv">
+
+    <!-- ===== KOLOM KIRI ===== -->
+    <aside class="side">
+      <div class="photo"><img id="foto" src="foto.jpg" alt="Foto Nama Kamu" onerror="this.hidden=true"></div>
+
+      <section>
+        <h2>Kontak</h2>
+        <ul class="plain">
+          <li>083846177424</li>
+          <li>nami22711.com</li>
+          <li>Desa penyak,Bangka Tengah</li>
+          <li>https://www.instagram.com/imanhonley</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Keahlian</h2>
+        <ul class="plain">
+          <li>HTML CSS Javascript</li>
+          <li>Microsoft Office</li>
+          <li>Desain dengan Canva</li>
+          <li>Komunikasi dan kerja tim</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Bahasa</h2>
+        <ul class="plain">
+          <li>Indonesia (aktif)</li>
+
+        </ul>
+      </section>
+    </aside>
+
+    <!-- ===== KOLOM KANAN ===== -->
+    <div class="main">
+      <header>
+        <h1>Iman</h1>
+        <p class="job">Web Developer</p>
+      </header>
+
+      <section>
+        <h2>Profil</h2>
+        <p>Saya adalah individu berlatar belakang Ilmu Komputer yang tertarik pada pengembangan web dan teknologi digital. Dengan kemampuan belajar yang cepat, ketelitian, dan semangat untuk terus berkembang, saya berkomitmen menghasilkan karya digital yang fungsional, berkualitas, dan sesuai kebutuhan pengguna. Saya siap berkolaborasi, menghadapi tantangan baru, serta berkontribusi dalam pengembangan solusi teknologi yang inovatif.</p>
+      </section>
+
+      <section>
+        <h2>Pengalaman kerja</h2>
+        <article class="item">
+          <div class="row">
+            <h3>Freelance Web Developer</h3><span>2028 – sekarang</span>
+          </div>
+          <p class="org">Pekerja mandiri</p>
+          <ul>
+            <li>Membuat website profil dan toko online untuk klien usaha kecil.</li>
+            <li>Mengatur tampilan agar nyaman dibuka di ponsel.</li>
+          </ul>
+        </article>
+        <article class="item">
+          <div class="row">
+            <h3>Magang Frontend Developer</h3><span>2023</span>
+          </div>
+          <p class="org">Bandara Depati Amir</p>
+          <ul>
+            <li>Membangun komponen antarmuka dan memperbaiki bug.</li>
+            <li>Ikut proses review kode bersama tim.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Pendidikan</h2>
+        <article class="item">
+          <div class="row">
+            <h3>S1 Ilmu Komputer</h3><span>2024 – 2028</span>
+          </div>
+          <p class="org">Universitas Muhammadiyah Bangka Belitung, IPK 3,80</p>
+        </article>
+        <article class="item">
+          <div class="row">
+            <h3>SMA/SMK Jurusan IPA</h3><span>2021 – 2024</span>
+          </div>
+          <p class="org">SMK N 1 KOBA</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Sertifikat dan organisasi</h2>
+        <ul>
+          <li>Sertifikat Dasar Pemrograman Web, Nama Penyelenggara (2023).</li>
+          <li>Anggota Himpunan Mahasiswa Ilmu Komputer (2024 – 2025).</li>
+        </ul>
+      </section>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
